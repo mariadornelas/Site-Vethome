@@ -1,42 +1,237 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* src/App.css */
+:root {
+  /* SUA PALETA EXATA */
+  --brand-navy:   #01017b; /* Para Textos e Footer */
+  --brand-blue:   #5260f7; /* Para Botões e Ícones */
+  --brand-lilac:  #b699fc; /* Para Detalhes/Bordas */
+  --brand-ice:    #c0f2fd; /* Para Fundos Suaves */
+  
+  --white: #ffffff;
+  --gray-light: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--brand-navy); /* Texto padrão agora é o azul escuro */
+  line-height: 1.6;
+}
+
+/* Navbar Limpa */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background: var(--white);
+  border-bottom: 3px solid var(--brand-ice); /* Detalhe sutil */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--brand-blue); /* Logo vibrante */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.5px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--brand-navy);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--brand-blue);
+}
+
+/* Hero Section - A grande mudança */
+.hero {
+  /* Fundo branco com um degradê MUITO suave do seu azul gelo */
+  background: linear-gradient(135deg, var(--white) 30%, var(--brand-ice) 100%);
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Texto na esq, Imagem na dir */
+  padding: 0 5%;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--brand-navy);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555; /* Cinza médio para leitura */
+  margin-bottom: 2rem;
+}
+
+/* Imagem flutuante arredondada */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Forma orgânica */
+  box-shadow: 20px 20px 0px var(--brand-lilac); /* Sombra sólida lilás */
+  object-fit: cover;
+}
+
+/* Botões */
+.btn-primary {
+  background-color: var(--brand-blue);
+  color: var(--white);
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(82, 96, 247, 0.3); /* Sombra suave da cor do botão */
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background-color: var(--brand-navy); /* Escurece ao passar o mouse */
+  box-shadow: 0 6px 20px rgba(1, 1, 123, 0.2);
+}
+
+/* Services */
+.section {
+  padding: 6rem 5%;
+}
+
+.section-bg-light {
+  background-color: var(--brand-ice); /* Fundo Gelo suave */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--brand-navy);
+  font-size: 2.2rem;
+  position: relative;
+}
+
+/* Pequeno detalhe abaixo do título */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--brand-blue);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  text-align: left; /* Texto alinhado à esquerda fica mais moderno */
+  transition: transform 0.3s, border 0.3s;
+  border: 1px solid transparent;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--brand-lilac); /* Borda lilás ao passar o mouse */
+}
+
+.icon-box {
+  background-color: var(--brand-ice);
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-blue);
+  margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+  color: var(--brand-navy);
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--brand-navy);
+  color: var(--white);
+  padding: 4rem 5% 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer h4 {
+  color: var(--brand-ice);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li {
+  margin-bottom: 0.8rem;
+  color: #ccc;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    height: auto;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  
+  .hero h1 { font-size: 2.5rem; }
+  .hero-img { width: 80%; margin-bottom: 2rem; }
+  .nav-links { display: none; } 
 }
