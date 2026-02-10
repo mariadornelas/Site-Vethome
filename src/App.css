@@ -68,12 +68,13 @@ body {
   align-items: center;
   justify-content: space-between; /* Texto na esq, Imagem na dir */
   padding: 0 5%;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .hero-content {
   flex: 1;
   max-width: 600px;
+  margin-left: 170px;
 }
 
 .hero h1 {
