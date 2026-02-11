@@ -14,7 +14,7 @@ const Home = () => (
         </div>
         <div className="hero-image-container">
             <img
-                src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&auto=format&fit=crop&w=612&q=80"
+                src="https://img.freepik.com/fotos-premium/gato-e-cachorro-juntos-na-frente-de-fundo-branco_191971-29522.jpg"
                 alt="Cachorro feliz"
                 className="hero-img"
             />
