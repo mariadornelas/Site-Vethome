@@ -53,6 +53,10 @@ const Contact = () => (
                     <input type="text" style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ddd', background: '#fcfcfc' }} />
                 </div>
                 <div style={{ marginBottom: '1rem' }}>
+                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold', color: 'var(--brand-navy)' }}>Nome do Pet</label>
+                    <input type="text" style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ddd', background: '#fcfcfc' }} />
+                </div>
+                <div style={{ marginBottom: '1rem' }}>
                     <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold', color: 'var(--brand-navy)' }}>Telefone</label>
                     <input type="tel" style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ddd', background: '#fcfcfc' }} />
                 </div>
