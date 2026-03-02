@@ -6,7 +6,7 @@ import {
 
 const Footer = () => (
     <footer className="footer">
-        <div className="footer-grid">
+        <div className="footer-grid" style={{ display: 'flex', justifyContent: 'center', gap: '20rem', flexWrap: 'wrap' }}>
             <div>
                 <div className="logo" style={{ color: 'white', marginBottom: '1rem' }}>
                     <PawPrint /> VetHome
@@ -14,19 +14,10 @@ const Footer = () => (
                 <p style={{ opacity: 0.8 }}>Cuidando com amor desde 2010.</p>
             </div>
             <div>
-                <h4>Links Rápidos</h4>
-                <ul>
-                    <li>Sobre nós</li>
-                    <li>Equipe</li>
-                    <li>Blog</li>
-                </ul>
-            </div>
-            <div>
                 <h4>Horários</h4>
                 <ul>
                     <li>Seg - Sex: 08h às 20h</li>
                     <li>Sábado: 09h às 14h</li>
-                    <li>Domingo: Plantão</li>
                 </ul>
             </div>
         </div>
